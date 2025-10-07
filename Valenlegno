@@ -1,0 +1,184 @@
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valen Legno</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Valen Legno</h1>
+    <p>Custom Furniture Crafted to Perfection</p>
+    <a href="#products" class="btn">Explore Now</a>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      At Valen Legno, we design and build elegant, durable furniture
+      that perfectly blends art and comfort. Every piece tells a story of craftsmanship and detail.
+    </p>
+  </section>
+
+  <section id="products" class="products">
+    <h2>Our Creations</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Wooden Chair">
+        <h3>Luxury Chair</h3>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1598300052623-6b9b1f4f20e2" alt="Dining Table">
+        <h3>Dining Table</h3>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1615874959474-d609969a2d3b" alt="Sofa Set">
+        <h3>Sofa Set</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Let’s build your dream furniture together.</p>
+    <a href="#" class="btn">Email Us</a>
+    <a href="#" class="btn secondary">WhatsApp</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Valen Legno. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+style.css
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #222;
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* Hero */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #ececec, #f5f5f5);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  margin: 15px 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #111;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #333;
+}
+.btn.secondary {
+  background: #555;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+/* About */
+.about p {
+  text-align: center;
+  color: #555;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Products */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+}
+
+.contact .btn {
+  margin: 10px;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+script.js
+
+// Simple JS just for scroll effect
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
